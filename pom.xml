@@ -191,11 +191,11 @@
     </pluginManagement>
   </build>
   <distributionManagement>
-    <site>
-      <id>guava-site</id>
-      <name>Guava Documentation Site</name>
-      <url>scp://dummy.server/dontinstall/usestaging</url>
-    </site>
+    <repository>
+      <id>zauber-code-releases</id>
+      <name>Zauber Code Releases</name>
+      <url>https://repo1.flowics.com/content/repositories/zauber-code-releases/</url>
+    </repository>
   </distributionManagement>
   <dependencyManagement>
     <dependencies>
