@@ -87,6 +87,15 @@ public final class Closeables {
     }
   }
 
+  //added for retrocompatibility
+    public static void closeQuietly(@Nullable Closeable closeable) throws IOException {
+        try {
+            close(closeable, true);
+        } catch (IOException impossible) {
+            throw new AssertionError(impossible);
+        }
+    }
+
   /**
    * Closes the given {@link InputStream}, logging any {@code IOException} that's thrown rather
    * than propagating it.
